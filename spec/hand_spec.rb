@@ -18,11 +18,17 @@ describe Hand do
     let(:card3) { Card.new(:hearts, 10) }
 
     it 'adds one card to the hand' do
+      # card = double("card", :suit => :clubs, :value => 3)
+      # card2 = double("card2", :suit => :diamonds, :value => 10)
+
       hand1.add_cards(card3)
       expect(hand1.hand.include?(card3)).to be true
     end
 
     it 'adds multiple cards to the hand' do
+      # card = double("card", :suit => :clubs, :value => 3)
+      # card2 = double("card2", :suit => :diamonds, :value => 10)
+
       hand1.add_cards([card, card2])
       expect(hand1.hand.include?(card)).to be true
       expect(hand1.hand.include?(card2)).to be true
